@@ -1,0 +1,510 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+html {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    background-color: #11140f;
+    font-family: "Montserrat", sans-serif;
+    margin: 0; /* Remove default margin */
+    padding: 0;
+    overflow-x: hidden;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    position: relative;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit; /* Inherit box-sizing from the body */
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 30px; /* Add 30px padding */
+    background-color: #11140f; /* Ensure the background color matches */
+    margin: 0; /* Remove margin */
+}
+
+.container img {
+    margin-right: 7px; /* Adjust the spacing between the image and text as needed */
+    width: 52px;
+    height: 52px;
+}
+
+.title {
+    font-size: 48px;
+    font-weight: bold;
+    color: white; /* Adjust the text color as needed */
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    line-height: 59px; /* identical to box height */
+    margin: 0;
+}
+
+.description {
+    font-size: 26px;
+    color: white;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0 30px; /* Removed top margin */
+}
+
+.subtext {
+    font-size: 32px;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    margin: 0 30px;
+}
+
+.download-button {
+    width: 477px;
+    height: 50px;
+    border-radius: 15px;
+    background-color: #91ef61;
+    border: none;
+    cursor: pointer;
+    margin: 30px 30px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    display: block;
+}
+
+.download-button:hover {
+    opacity: 0.9;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-320px * 6));
+    }
+}
+
+.cards-container {
+    display: flex;
+    overflow-x: hidden;
+    gap: 20px;
+    padding: 30px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    animation: scroll 30s linear infinite;
+    width: fit-content;
+
+}
+
+.cards-container:hover {
+    animation-play-state: paused;
+}
+
+.cards-container::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    width: 300px;
+    min-width: 300px;
+    height: 150px;
+    background-color: #191d16;
+    border-radius: 10px;
+    flex-shrink: 0;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.reviewer-img {
+    width: 52px;
+    height: 52px;
+    border-radius: 30%;
+    object-fit: cover;
+}
+
+.reviewer-name {
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.review-text {
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    margin: 5px 0;
+    line-height: 1.2;
+}
+
+.rating {
+    color: #bbbbbb;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: auto;
+}
+
+.cards-wrapper {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.features-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 30px;
+    justify-content: center;
+}
+
+.feature-card {
+    width: 430px;
+    height: 250px;
+    background-color: #191d16;
+    border-radius: 10px;
+    flex-shrink: 0;
+    padding: 25px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card h3 {
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    margin-top: -5px;
+    margin-bottom: 15px;
+}
+
+.feature-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.feature-card li {
+    color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 12px;
+    padding-left: 24px;
+    position: relative;
+    opacity: 0.9;
+}
+
+.feature-card li::before {
+    content: "•";
+    color: #91ef61;
+    position: absolute;
+    left: 0;
+    font-size: 20px;
+}
+
+.info-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 30px;
+    justify-content: center;
+}
+
+.info-card {
+    width: 580px;
+    height: 120px;
+    background-color: #191d16;
+    border-radius: 10px;
+    padding: 25px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info-card h3 {
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: -5px;
+    margin-bottom: 10px;
+}
+
+.info-card p {
+    color: rgba(255, 255, 255, 0.9);
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    margin: 0;
+    opacity: 0.9;
+}
+
+.tall-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 30px;
+    justify-content: center;
+}
+
+.tall-card {
+    width: 580px;
+    height: 388px;
+    background-color: #191d16;
+    border-radius: 10px;
+    padding: 25px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+}
+
+.tall-card h3 {
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 15px 0 5px 0;
+}
+
+.card-username {
+    color: rgba(255, 255, 255, 0.7);
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+}
+
+.download-btn {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    background-color: #2C3A47;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.download-btn:hover {
+    background-color: #3C4A57;
+}
+
+.tall-card-img {
+    width: 488px;  /* Fixed width */
+    height: 260px;
+    object-fit: contain;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: row; /* Keep horizontal layout */
+        align-items: center; /* Vertical alignment */
+        padding: 30px 30px; /* Maintain horizontal padding */
+    }
+
+    .container img {
+        width: 42px; /* Slightly smaller image */
+        height: 42px;
+        margin-right: 10px;
+        margin-bottom: 0; /* Remove bottom margin */
+    }
+
+    .title {
+        font-size: 38px; /* Adjusted font size */
+        line-height: 1.2; /* Use relative line-height */
+        text-align: left; /* Explicit left alignment */
+    }
+
+    .description {
+        font-size: 22px;
+        line-height: 1.4;
+    }
+
+    .subtext {
+        font-size: 28px;
+        margin: 0 30px;
+        line-height: 1.4;
+    }
+
+    .download-button {
+        width: calc(100% - 60px);
+        margin: 30px 30px;
+        font-size: 16px;
+    }
+
+    .cards-container {
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .card {
+        width: 300px;
+        min-width: 300px;
+        height: 150px;
+    }
+
+    .feature-card {
+        width: calc(100% - 40px);
+    }
+
+    .info-card {
+        width: 100%;
+        height: auto;
+        min-height: 100px;
+        padding: 20px;
+    }
+
+    .info-card h3 {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+
+    .info-card p {
+        font-size: 14px;
+    }
+
+    .info-cards-container {
+        padding: 15px;
+    }
+
+    .tall-card {
+        width: calc(100% - 30px);
+        height: auto;
+        min-height: 350px;
+        padding: 15px;
+    }
+    
+    .tall-card-img {
+        width: 100%;
+        height: auto;
+        max-height: 200px;
+    }
+    
+    .download-btn {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .tall-card-img {
+        width: calc(100% - 30px);  /* Account for padding */
+        height: auto;
+        max-height: 260px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15px 20px; /* Adjusted padding */
+    }
+
+    .container img {
+        width: 36px; /* Smaller image for mobile */
+        height: 36px;
+    }
+
+    .title {
+        font-size: 28px; /* Smaller font size */
+    }
+
+    .description {
+        font-size: 18px;
+        margin: 0px 20px 0 20px;
+        line-height: 1.3;
+    }
+
+    .subtext {
+        font-size: 24px;
+        margin: 0 30px;
+        line-height: 1.3;
+    }
+
+    .download-button {
+        width: calc(100% - 50px);
+        margin: 30px 30px;
+        font-size: 14px;
+        height: 45px;
+    }
+
+    .cards-container {
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .card {
+        width: 300px;
+        min-width: 300px;
+        height: 150px;
+    }
+
+    .tall-card {
+        width: calc(100% - 30px);
+        height: auto;
+        min-height: 350px;
+        padding: 15px;
+    }
+
+    .tall-card-img {
+        width: 100%;
+        height: auto;
+        max-height: 200px;
+    }
+
+    .download-btn {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        width: 100%;
+        margin-top: 20px;
+        padding: 12px 0;
+        text-align: center;
+    }
+
+    .download-btn {
+        width: 100%;
+        margin: 20px 0 0 0;
+        padding: 12px 0;
+    }
+}
